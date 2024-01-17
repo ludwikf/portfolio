@@ -1,0 +1,116 @@
+{
+  "navbar": {
+    "dashboard": "Dashboard",
+    "users": "Users",
+    "posts": "Posts",
+    "reviews": "Reviews",
+    "newsletter": "Newsletter",
+    "analytics": "Analytics",
+    "logs": "Logs",
+    "playground": "Playground",
+    "settings": "Settings",
+    "logout": "Logout",
+    "main": "Main"
+  },
+  "dashboard": {
+    "title": "Hello",
+    "description": "Dashboard",
+    "today": "Today",
+    "yesterday": "Yesterday",
+    "post": {
+      "title": "Latest Post"
+    },
+    "review": {
+      "title": "Latest Review"
+    },
+    "user": {
+      "title": "New User"
+    },
+    "generalData": {
+      "visitors": "UNIQUE VISITORS",
+      "pageviews": "TOTAL PAGEVIEWS",
+      "br": "BOUNCE RATE"
+    },
+    "visitors": {
+      "title": "Visitors"
+    }
+  },
+  "users": {
+    "title": "Users",
+    "description": "Manage user accounts",
+    "playground": "Go to playground",
+    "search": "Search...",
+    "noMore": "No more users to display",
+    "table": {
+      "username": "Username",
+      "email": "Email",
+      "createdAt": "Created At",
+      "role": "Role"
+    },
+    "confirm": {
+      "titleRole": "Are you sure you want to change this users role?",
+      "titleDelete": "Are you sure you want to delete this user?",
+      "confirm": "Confirm",
+      "cancel": "Cancel"
+    },
+    "newUser": {
+      "title": "Add new account",
+      "username": "Username",
+      "email": "Email",
+      "password": "Password",
+      "confirm": "Create"
+    }
+  },
+  "posts": {
+    "title": "Posts",
+    "description": "Add content to your page",
+    "playground": "Go to playground",
+    "new": "Add new",
+    "search": "Search...",
+    "noMore": "No more posts to display",
+    "table": {
+      "image": "Image",
+      "title": "Title",
+      "author": "Author",
+      "createdAt": "Created At"
+    }
+  },
+  "analytics": {
+    "title": "Analytics",
+    "description": "Monitor website performance",
+    "generalData": {
+      "visitors": "UNIQUE VISITORS",
+      "pageviews": "TOTAL PAGEVIEWS",
+      "br": "BOUNCE RATE"
+    },
+    "visitors": {
+      "title": "Visitors"
+    },
+    "countries": {
+      "title": "Countries"
+    },
+    "devices": {
+      "title": "Devices"
+    },
+    "pages": {
+      "title": "Top Pages"
+    }
+  },
+  "form": {
+    "title": "Title",
+    "subject": "Subject",
+    "content": "Content",
+    "edit": "Edit",
+    "create": "Create",
+    "login": "Login",
+    "register": "Register",
+    "back": "Go back",
+    "goToRegister": "Create admin account",
+    "username": "Username",
+    "email": "Email",
+    "search": "Search...",
+    "password": "Password",
+    "noMore": "No more posts to display",
+    "noMoreReview": "No reviews to display"
+  }
+}
