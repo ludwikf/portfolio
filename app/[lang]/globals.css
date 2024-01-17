@@ -68,3 +68,16 @@ body {
 .displayBlock {
   display: block;
 }
+
+.e {
+  transition: transform 0.1s ease;
+  transform: scaleY(0);
+}
+
+.boxEffect:hover .e {
+  transform: scaleY(1);
+}
+
+.boxEffect:hover .q {
+  color: black;
+}
