@@ -3,6 +3,7 @@ import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
+import Carousel from "@/app/components/main/Carousel";
 
 export default function Main() {
   return (
@@ -129,10 +130,13 @@ export default function Main() {
           </p>
         </div>
       </div>
-      <div className="h-[100dvh] bg-[#0d0d0d]">
+      <div className="h-[100dvh] bg-[#0d0d0d] flex flex-col justify-center items-center">
         <h1 className="py-14 text-lg text-thirdTheme flex justify-center">
           My Projects
         </h1>
+        <div className="w-[100%] h-[80%]">
+          <Carousel />
+        </div>
       </div>
       <div className="h-[100dvh] bg-[url(https://firebasestorage.googleapis.com/v0/b/portfolio-95980.appspot.com/o/cube2.jpg?alt=media&token=736e6a31-7596-46af-bfb3-4c790577d275)] bg-no-repeat bg-fixed bg-cover sm:bg-center bg-left">
         <div className="text-thirdTheme text-8xl font-bold flex justify-center items-center h-full">

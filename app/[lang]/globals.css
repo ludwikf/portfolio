@@ -81,3 +81,57 @@ body {
 .boxEffect:hover .q {
   color: black;
 }
+
+div.swiper-button-prev::after {
+  margin-bottom: 115px;
+  position: absolute;
+  color: #b7ab98;
+}
+
+div.swiper-button-next::after {
+  margin-bottom: 115px;
+  color: #b7ab98;
+}
+
+div.swiper-pagination {
+  margin-bottom: 80px;
+}
+
+span.swiper-pagination-bullet {
+  background-color: #b7ab98;
+}
+
+/* p.web {
+  opacity: 0;
+  position: absolute;
+  color: #cdbfaa;
+  font-size: 2em;
+  left: 50%;
+  top: 22%;
+  transform: translateX(-50%);
+  transition: 0.2s;
+  pointer-events: none;
+} */
+
+/* .a:hover {
+  filter: brightness(30%);
+} */
+
+/* .a:hover + p.web {
+  opacity: 1;
+} */
+
+.z p {
+  width: 90%;
+  font-size: 1.4em;
+}
+
+@media screen and (max-width: 500px) {
+  div.swiper-button-prev {
+    display: none;
+  }
+
+  div.swiper-button-next {
+    display: none;
+  }
+}
