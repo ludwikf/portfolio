@@ -1,4 +1,47 @@
 {
+  "mainNavbar": {
+    "about": "About",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "about": {
+    "title": "ABOUT ME",
+    "content1": "Web developer with",
+    "span": "high expertise",
+    "content2": "in front-end and back-end technologies, creating responsive and dynamic websites"
+  },
+  "whatIDo": {
+    "title": "WHAT I DO",
+    "content": {
+      "responsive": {
+        "title": "RESPONSIVE",
+        "content": "Designing interfaces that fluidly adjust to different screen sizes, providing the best user experience on all devices"
+      },
+      "html": "Mastery in developing orderly HTML and CSS code to achieve precise designs and maintain consistent styling",
+      "js": "Creating interactive and dynamic website elements using modern JavaScript libraries and frameworks",
+      "dev": {
+        "title": "DEVELOPMENT",
+        "content": "Proficiency in developing, ensuring optimal user experiences across various devices"
+      },
+      "test": {
+        "title": "TEST / DEBUG",
+        "content": "Ensuring consistent functionality and appearance by testing and debugging across various browsers"
+      }
+    }
+  },
+  "exp": {
+    "title": "EXPERIENCE",
+    "content1": "With a",
+    "span": "passion",
+    "content2": "for turning concpets into interctive realities, i bring innovation and functionality to every project"
+  },
+  "myProjects": "My Projects",
+  "idea": {
+    "content1": "HAVE AN",
+    "span": "IDEA",
+    "content2": "LET'S DISCUSS"
+  },
+  "phone": "PHONE",
   "navbar": {
     "dashboard": "Dashboard",
     "users": "Users",

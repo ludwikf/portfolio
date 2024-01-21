@@ -1,5 +1,5 @@
 import connectMongoDB from "@/libs/mongodb";
-import Post from "@/models/Post";
+import Project from "@/models/Project";
 import { NextResponse } from "next/server";
 
 export const GET = async (req: any) => {
@@ -11,9 +11,9 @@ export const GET = async (req: any) => {
 
     const skip = (page - 1) * pageSize;
 
-    const posts = await Post.find().skip(skip).limit(pageSize);
+    const projects = await Project.find().skip(skip).limit(pageSize);
 
-    return new NextResponse(JSON.stringify(posts));
+    return new NextResponse(JSON.stringify(projects));
   } catch (error: any) {
     return new NextResponse(error, {
       status: 500,

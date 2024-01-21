@@ -3,7 +3,6 @@ import { Roboto } from "next/font/google";
 import { getServerSession } from "next-auth/next";
 import SessionProvider from "@/libs/SessionProvider";
 import { Metadata } from "next";
-import Navbar from "@/app/components/main/Navbar";
 
 const SS3 = Roboto({ subsets: ["cyrillic-ext"], weight: "400" });
 
@@ -22,10 +21,7 @@ export default async function RootLayout({
 
   return (
     <main className={SS3.className}>
-      <SessionProvider session={session}>
-        <Navbar />
-        {children}
-      </SessionProvider>
+      <SessionProvider session={session}>{children}</SessionProvider>
     </main>
   );
 }

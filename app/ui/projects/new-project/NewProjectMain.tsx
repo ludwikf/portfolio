@@ -10,16 +10,13 @@ import { app } from "@/utils/firebase";
 import { PlusCircleIcon } from "@heroicons/react/24/solid";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
-import { useSession } from "next-auth/react";
 
-export default function NewPostMain({ locale }: any) {
+export default function NewProjectMain({ locale }: any) {
   const [file, setFile] = useState<File | null>(null);
   const [media, setMedia] = useState<string>("");
   const textareaRef = useRef<HTMLTextAreaElement>(null);
   const router = useRouter();
   const [isSubmitting, setIsSubmitting] = useState(false);
-
-  const { data: session }: any = useSession();
 
   const adjustTextareaHeight = () => {
     const textarea = textareaRef.current;
@@ -33,31 +30,32 @@ export default function NewPostMain({ locale }: any) {
     e.preventDefault();
 
     const title = e.target[0].value;
-    const content = e.target[1].value;
-    const author = session.user.username;
+    const link = e.target[1].value;
+    const github = e.target[2].value;
+    const description = e.target[3].value;
     let image = media;
 
     if (!media) {
       image =
-        "https://firebasestorage.googleapis.com/v0/b/test-admincp.appspot.com/o/no-image-icon-2048x2048-2t5cx953.png?alt=media&token=91f72576-e73e-4274-90c2-c8f25b0f94de";
+        "https://firebasestorage.googleapis.com/v0/b/portfolio-95980.appspot.com/o/cube.jpg?alt=media&token=6d0ec00c-114f-45e1-afa1-d825da4f3c37";
     }
 
     setIsSubmitting(true);
 
     try {
-      const res = await fetch("/api/add-post", {
+      const res = await fetch("/api/add-project", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ title, content, author, image, session }),
+        body: JSON.stringify({ title, link, github, description, image }),
       });
 
       if (!res.ok) {
         throw new Error("Error submitting");
       }
       if (res.status === 200) {
-        router.push("/admin-cp/posts");
+        router.push("/admin-cp/projects");
       }
     } catch (error: any) {
       throw new Error(error);
@@ -123,6 +121,16 @@ export default function NewPostMain({ locale }: any) {
               type="text"
               placeholder={locale.title}
               required
+            />
+            <input
+              className="bg-inherit text-xl lg:text-2xl placeholder:text-[#999] focus:outline-none"
+              type="text"
+              placeholder="Link"
+            />
+            <input
+              className="bg-inherit text-xl lg:text-2xl placeholder:text-[#999] focus:outline-none"
+              type="text"
+              placeholder="Github"
             />
             <textarea
               ref={textareaRef}

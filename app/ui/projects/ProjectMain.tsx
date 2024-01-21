@@ -11,34 +11,33 @@ import { useSession } from "next-auth/react";
 import CustomLink from "@/app/components/CustomLink";
 import Image from "next/image";
 
-export default function PostsMain({ locale, lang }: any) {
-  const [posts, setPosts] = useState<any[]>([]);
+export default function ProjectMain({ locale, lang }: any) {
+  const [projects, setProjects] = useState<any[]>([]);
   const [searchQuery, setSearchQuery] = useState("");
   const [sortOrder, setSortOrder] = useState("");
   const [sortBy, setSortBy] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const { data: session }: any = useSession();
   const [page, setPage] = useState<number>(1);
   const [hasMore, setHasMore] = useState<boolean>(true);
   const initialRender = useRef(true);
   const [initialFetchComplete, setInitialFetchComplete] = useState(false);
   const containerRef = useRef<HTMLDivElement | null>(null);
 
-  const fetchPosts = async (page: number) => {
+  const fetchProjects = async (page: number) => {
     setIsLoading(true);
     try {
-      const res = await fetch(`/api/get-posts?page=${page}`);
+      const res = await fetch(`/api/get-projects?page=${page}`);
 
       if (!res.ok) {
-        throw new Error("Error fetching posts");
+        throw new Error("Error fetching projects");
       }
 
       const data = await res.json();
       if (data.length === 0) {
         setHasMore(false);
       } else {
-        setPosts((prevPosts) => [...prevPosts, ...data]);
+        setProjects((prevProjects) => [...prevProjects, ...data]);
       }
     } catch (error: any) {
       throw new Error(error);
@@ -51,9 +50,9 @@ export default function PostsMain({ locale, lang }: any) {
     if (hasMore) {
       if (!initialRender.current) {
         try {
-          await fetchPosts(page);
+          await fetchProjects(page);
         } catch (error) {
-          console.error("Error fetching posts:", error);
+          console.error("Error fetching projects:", error);
         }
       } else {
         initialRender.current = false;
@@ -95,31 +94,31 @@ export default function PostsMain({ locale, lang }: any) {
     });
   };
 
-  const filterPosts = (query: string) => {
-    let filteredPosts = posts;
+  const filterProjects = (query: string) => {
+    let filteredProjects = projects;
 
     if (query) {
-      filteredPosts = filteredPosts.filter(
+      filteredProjects = filteredProjects.filter(
         (post) =>
           (post.title || "").toLowerCase().includes(query.toLowerCase()) ||
           (post.author || "").toLowerCase().includes(query.toLowerCase())
       );
     }
-    const uniquePosts = filteredPosts.filter(
-      (post, index) =>
-        index === filteredPosts.findIndex((p) => p._id === post._id)
+    const uniqueProjects = filteredProjects.filter(
+      (project, index) =>
+        index === filteredProjects.findIndex((p) => p._id === project._id)
     );
 
     if (sortBy === "createdAt") {
-      return sortByCreatedAt(uniquePosts);
+      return sortByCreatedAt(uniqueProjects);
     }
-    return sortByColumn(sortBy, uniquePosts);
+    return sortByColumn(sortBy, uniqueProjects);
   };
 
-  const handleRefreshPosts = async () => {
+  const handleRefreshprojects = async () => {
     setIsLoading(true);
     try {
-      setPosts([]);
+      setProjects([]);
       setPage(1);
       setHasMore(true);
       setSearchQuery("");
@@ -128,7 +127,7 @@ export default function PostsMain({ locale, lang }: any) {
 
       fetchHandler();
     } catch (error) {
-      throw new Error("Error refreshing posts");
+      throw new Error("Error refreshing projects");
     } finally {
       setIsLoading(false);
     }
@@ -146,19 +145,15 @@ export default function PostsMain({ locale, lang }: any) {
     }
   };
 
-  const deletePost = async (postId: any) => {
+  const deleteProject = async (projectId: any) => {
     setIsSubmitting(true);
     try {
-      const res = await fetch(`/api/delete-post?id=${postId}`, {
+      const res = await fetch(`/api/delete-project?id=${projectId}`, {
         method: "DELETE",
-        headers: {
-          "Content-Type": "application/json",
-          Session: JSON.stringify(session),
-        },
       });
       if (res.ok) {
-        setPosts((prevPosts) =>
-          prevPosts.filter((user) => user._id !== postId)
+        setProjects((prevprojects) =>
+          prevprojects.filter((user) => user._id !== projectId)
         );
       } else {
         throw new Error("Failed to delete post");
@@ -188,7 +183,7 @@ export default function PostsMain({ locale, lang }: any) {
       <div className="flex justify-between w-full ">
         <div className="flex items-center mb-3 gap-1.5 lg:gap-3 select-none">
           <button
-            onClick={handleRefreshPosts}
+            onClick={handleRefreshprojects}
             disabled={isLoading}
             className=" text-white rounded-full hover:brightness-50 transition-all rotate"
           >
@@ -207,7 +202,7 @@ export default function PostsMain({ locale, lang }: any) {
         </div>
 
         <CustomLink
-          href={`/admin-cp/posts/new-post`}
+          href={`/admin-cp/projects/new-project`}
           lang={lang}
           className="text-center lg:bg-white lg:text-black lg:px-3 lg:py-2 rounded-full lg:rounded-xl hover:brightness-50 transition-all mb-3"
         >
@@ -245,7 +240,7 @@ export default function PostsMain({ locale, lang }: any) {
                   }}
                   className="w-[80px] cursor-pointer "
                 >
-                  {locale.table.author}
+                  Link
                 </p>
               </td>
               <td className="min-w-[120px] lg:w-[15%]">
@@ -262,22 +257,22 @@ export default function PostsMain({ locale, lang }: any) {
                 <TrashIcon className="w-5 hidden" />
               </td>
             </tr>
-            {filterPosts(searchQuery).map((post, index) => (
+            {filterProjects(searchQuery).map((project, index) => (
               <tr key={index} className="trTable h-[100px] rounded-3xl">
                 <td className="pl-3 rounded-s-3xl w-[70px] h-">
                   <div className="w-[150px] h-[80px] relative flex justify-center items-center">
                     <Image
-                      src={post.image}
+                      src={project.image}
                       alt={"img"}
                       width={100}
                       height={100}
                     />
                   </div>
                 </td>
-                <td>{post.title}</td>
-                <td>{post.author}</td>
+                <td>{project.title}</td>
+                <td>{project.link}</td>
                 <td>
-                  {new Date(post.createdAt).toLocaleDateString("en-GB", {
+                  {new Date(project.createdAt).toLocaleDateString("en-GB", {
                     day: "2-digit",
                     month: "2-digit",
                     year: "numeric",
@@ -287,14 +282,14 @@ export default function PostsMain({ locale, lang }: any) {
                   <div className="flex gap-5 lg:gap-1">
                     <CustomLink
                       rel="stylesheet"
-                      href={`/admin-cp/posts/edit-post/${post._id}`}
+                      href={`/admin-cp/projects/edit-project/${project._id}`}
                       lang={lang}
                       className="cursor-pointer select-none hover:text-mainTheme"
                     >
                       <PencilSquareIcon className="w-6 lg:w-5" />
                     </CustomLink>
                     <TrashIcon
-                      onClick={() => deletePost(post._id)}
+                      onClick={() => deleteProject(project._id)}
                       className={`w-6 lg:w-5 cursor-pointer select-none hover:text-mainTheme ${
                         isSubmitting ? "pointer-events-none" : ""
                       }`}

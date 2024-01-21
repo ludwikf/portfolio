@@ -12,11 +12,13 @@ import Image from "next/image";
 import { useParams, useRouter } from "next/navigation";
 import { useSession } from "next-auth/react";
 
-export default function EditPostMain({ locale }: any) {
+export default function EditProjectMain({ locale }: any) {
   const [file, setFile] = useState<File | null>(null);
   const [media, setMedia] = useState<string>("");
   const [title, setTitle] = useState("");
-  const [content, setContent] = useState("");
+  const [description, setDescription] = useState("");
+  const [link, setLink] = useState("");
+  const [github, setGithub] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const { id } = useParams();
@@ -38,25 +40,27 @@ export default function EditPostMain({ locale }: any) {
     setIsSubmitting(true);
 
     const title = e.target[0].value;
-    const content = e.target[1].value;
+    const link = e.target[1].value;
+    const github = e.target[2].value;
+    const description = e.target[3].value;
     const image =
       media ||
       "https://static-00.iconduck.com/assets.00/no-image-icon-2048x2048-2t5cx953.png";
 
     try {
-      const res = await fetch(`/api/edit-post?id=${id}`, {
+      const res = await fetch(`/api/edit-project?id=${id}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ title, content, image, session }),
+        body: JSON.stringify({ title, link, github, description, image }),
       });
 
       if (!res.ok) {
         throw new Error("Error submitting");
       }
       if (res.status === 200) {
-        router.push("/admin-cp/posts");
+        router.push("/admin-cp/projects");
       }
     } catch (error) {
       throw new Error("Error submitting");
@@ -72,16 +76,18 @@ export default function EditPostMain({ locale }: any) {
     }
   };
 
-  const fetchPostDetails = async () => {
+  const fetchProjectDetails = async () => {
     if (!id) {
-      return router.push("/admin-cp/posts");
+      return router.push("/admin-cp/projects");
     }
     try {
-      const response = await fetch(`/api/single-post?id=${id}`);
+      const response = await fetch(`/api/single-project?id=${id}`);
       if (response.ok) {
         const data = await response.json();
         setTitle(data.title);
-        setContent(data.content);
+        setDescription(data.description);
+        setLink(data.link);
+        setGithub(data.github);
         setMedia(data.image);
       }
     } catch (error: any) {
@@ -90,7 +96,7 @@ export default function EditPostMain({ locale }: any) {
   };
 
   useEffect(() => {
-    fetchPostDetails();
+    fetchProjectDetails();
   }, []);
 
   useEffect(() => {
@@ -131,10 +137,10 @@ export default function EditPostMain({ locale }: any) {
 
   useEffect(() => {
     if (textareaRef.current) {
-      textareaRef.current.value = content;
+      textareaRef.current.value = description;
       adjustTextareaHeight();
     }
-  }, [content]);
+  }, [description]);
   return (
     <>
       <div className="my-[25px] flex w-screen flex-col justify-center items-center">
@@ -150,8 +156,22 @@ export default function EditPostMain({ locale }: any) {
               placeholder={locale.title}
               required
             />
+            <input
+              defaultValue={link}
+              className="bg-inherit text-xl lg:text-2xl placeholder:text-[#999] focus:outline-none"
+              type="text"
+              placeholder="Link"
+              required
+            />
+            <input
+              defaultValue={github}
+              className="bg-inherit text-xl lg:text-2xl placeholder:text-[#999] focus:outline-none"
+              type="text"
+              placeholder="Github"
+              required
+            />
             <textarea
-              defaultValue={content}
+              defaultValue={description}
               ref={textareaRef}
               className="bg-inherit text-lg lg:text-2xl placeholder:text-[#999] focus:outline-none resize-none"
               placeholder={locale.content}

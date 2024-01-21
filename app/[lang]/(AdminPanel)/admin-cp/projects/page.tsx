@@ -1,5 +1,5 @@
 import React from "react";
-import PostsMain from "@/app/ui/posts/PostsMain";
+import ProjectMain from "@/app/ui/projects/ProjectMain";
 import { Locale } from "@/i18n.config";
 import { getDictionary } from "@/libs/dictionary";
 import CustomLink from "@/app/components/CustomLink";
@@ -27,7 +27,7 @@ export default async function Posts({
           </div>
         </div>
         <div className="w-[90%] h-[84%] flex flex-col items-end">
-          <PostsMain locale={posts} lang={lang} />
+          <ProjectMain locale={posts} lang={lang} />
         </div>
       </div>
     </main>

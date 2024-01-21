@@ -160,10 +160,10 @@ export default function Navbar({
                 </div>
               </CustomLink>
               <CustomLink
-                href={`/admin-cp/posts`}
+                href={`/admin-cp/projects`}
                 lang={lang}
                 className={`hover:bg-mainTheme hover:text-black ${isActive(
-                  `/admin-cp/posts`
+                  `/admin-cp/projects`
                 )}  ${
                   expand ? "w-[150px]" : "w-[36px]"
                 } h-[35px] flex justify-start items-center rounded-xl`}

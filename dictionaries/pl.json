@@ -1,4 +1,47 @@
 {
+  "mainNavbar": {
+    "about": "O mnie",
+    "projects": "Projekty",
+    "contact": "Kontakt"
+  },
+  "about": {
+    "title": "O MNIE",
+    "content1": "Web developer z",
+    "span": "dużym doświadczeniem",
+    "content2": "w technologiach front-end i back-end, tworzący responsywne i dynamiczne strony internetowe"
+  },
+  "whatIDo": {
+    "title": "CO ROBIE",
+    "content": {
+      "responsive": {
+        "title": "RESPONSYWNOŚĆ",
+        "content": "Projektowanie interfejsów dostosowujących się płynnie do różnych rozmiarów ekranu, zapewniające optymalne doświadczenie użytkownika na wszystkich urządzeniach"
+      },
+      "html": "Znajomość tworzenia czytelnego kodu HTML i CSS w celu osiągnięcia precyzyjnych projektów i utrzymania spójnego stylowania",
+      "js": "Tworzenie interaktywnych i dynamicznych elementów witryny przy użyciu nowoczesnych bibliotek i frameworków JavaScript",
+      "dev": {
+        "title": "PUBLIKOWANIE",
+        "content": "Biegłość w publikowaniu, zapewniając optymalne doświadczenia użytkownika na różnych urządzeniach"
+      },
+      "test": {
+        "title": "TESTOWANIE",
+        "content": "Zabezpieczanie spójnej funkcjonalności i wyglądu poprzez testowanie i debugowanie w różnych przeglądarkach"
+      }
+    }
+  },
+  "exp": {
+    "title": "DOŚWIADCZENIE",
+    "content1": "Z",
+    "span": "pasją",
+    "content2": "do przekształcania koncepcji w interaktywne rzeczywistości, dostarczam innowacje i funkcjonalność do każdego projektu"
+  },
+  "myProjects": "Moje Projekty",
+  "idea": {
+    "content1": "MASZ",
+    "span": "POMYSŁ",
+    "content2": "PODYSKUTUJMY"
+  },
+  "phone": "TELEFON",
   "navbar": {
     "dashboard": "Panel",
     "users": "Użytkownicy",

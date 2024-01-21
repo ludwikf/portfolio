@@ -1,5 +1,5 @@
 import React from "react";
-import EditPostMain from "@/app/ui/posts/edit-post/EditPostMain";
+import EditProjectMain from "@/app/ui/projects/edit-project/EditProjectMain";
 import { Locale } from "@/i18n.config";
 import { getDictionary } from "@/libs/dictionary";
 
@@ -11,7 +11,7 @@ export default async function EditPost({
   const { form } = await getDictionary(lang);
   return (
     <main className="flex h-screen">
-      <EditPostMain locale={form} />
+      <EditProjectMain locale={form} />
     </main>
   );
 }
