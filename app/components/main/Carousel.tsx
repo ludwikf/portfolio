@@ -90,12 +90,16 @@ export default function Carousel() {
             >
               <div className="w-[100%] h-[100%] flex flex-col justify-start items-center">
                 <div className="w-[80%] h-[80%]">
-                  <div className="group relative flex justify-center items-center cursor-pointer overflow-hidden w-[100%] h-[50%]">
+                  <div className="group relative flex justify-center items-center overflow-hidden w-[100%] h-[50%]">
                     <Link
                       href={p.link}
                       style={{ backgroundImage: `url(${p.image})` }}
-                      className="w-[100%] h-[100%] bg-no-repeat bg-fixed bg-cover bg-left rounded-t-xl brightness-[.7] group-hover:blur-sm "
+                      className="hidden lg:block w-[100%] h-[100%] bg-no-repeat bg-fixed bg-cover bg-left rounded-t-xl brightness-[.7] group-hover:blur-sm "
                     ></Link>
+                    <div
+                      style={{ backgroundImage: `url(${p.image})` }}
+                      className="lg:hidden w-[100%] h-[100%] bg-no-repeat bg-fixed bg-cover bg-left rounded-t-xl brightness-[.7] group-hover:blur-sm "
+                    ></div>
                     <p className="text-thirdTheme hidden group-hover:block absolute font-bold text-2xl z-10">
                       <Link
                         href={p.link}
