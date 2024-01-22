@@ -5,7 +5,6 @@ import { NextResponse } from "next/server";
 export const PUT = async (req: any) => {
   try {
     const userId = req.nextUrl.searchParams.get("id");
-    const { session } = await req.json();
     await connectMongoDB();
 
     const user = await User.findById(userId);
