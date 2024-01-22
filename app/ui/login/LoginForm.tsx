@@ -93,23 +93,6 @@ export default function LoginForm({ locale, lang }: any) {
           </button>
           <p className="text-red-600 mt-4 ">{error && error}</p>
         </form>
-        <div className="flex justify-center items-center mb-10 sm:my-2 tall:my-5 tall:text-3xl">
-          <CustomLink
-            href={`/add-admin`}
-            lang={lang}
-            className="text-mainTheme"
-          >
-            {locale.goToRegister}
-          </CustomLink>
-          <span className="mx-5 text-[#666]">||</span>
-          <CustomLink
-            href={`/playground`}
-            lang={lang}
-            className="text-mainTheme flex gap-0.5"
-          >
-            Playground
-          </CustomLink>
-        </div>
       </div>
     </>
   );
