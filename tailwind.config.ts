@@ -13,7 +13,7 @@ const config: Config = {
         tallmd: { raw: "(max-height: 600px)" },
         short: { raw: "((min-width: 640px) and (max-height: 450px))" },
         shortnav: { raw: "(max-height: 450px)" },
-        xs: "400px",
+        sm: "300px",
       },
       colors: {
         thirdTheme: "#b7ab98",

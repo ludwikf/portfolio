@@ -30,7 +30,6 @@ export default async function RootLayout({
   if (!session) {
     redirect(`${GetLocale("/", lang)}`);
   }
-
   if ((session && (session.user as { role?: string }))?.role !== "admin") {
     redirect(`${GetLocale("/", lang)}`);
   }

@@ -84,20 +84,21 @@ export default function Carousel() {
           className="w-[100%] h-[100%] mt-7"
         >
           {projects.map((p) => (
-            <SwiperSlide className="relative w-[50px] text-center flex justify-center items-center">
+            <SwiperSlide
+              key={p._id}
+              className="relative w-[50px] text-center flex justify-center items-center"
+            >
               <div className="w-[100%] h-[100%] flex flex-col justify-start items-center">
                 <div className="w-[80%] h-[80%]">
-                  <Link
-                    href={p.link}
-                    className="group relative flex justify-center items-center cursor-pointer overflow-hidden w-[100%] h-[50%]"
-                  >
-                    <div
+                  <div className="group relative flex justify-center items-center cursor-pointer overflow-hidden w-[100%] h-[50%]">
+                    <Link
+                      href={p.link}
                       style={{ backgroundImage: `url(${p.image})` }}
                       className="w-[100%] h-[100%] bg-no-repeat bg-fixed bg-cover bg-left rounded-t-xl brightness-[.7] group-hover:blur-sm "
-                    ></div>
+                    ></Link>
                     <p className="text-thirdTheme hidden group-hover:block absolute font-bold text-2xl z-10">
                       <Link
-                        href={p.github}
+                        href={p.link}
                         className="mx-1.5 hover:text-[#b7ab9890] duration-[75ms]"
                       >
                         <FontAwesomeIcon
@@ -115,12 +116,14 @@ export default function Carousel() {
                         />
                       </Link>
                     </p>
-                  </Link>
+                  </div>
 
                   <div className="flex w-[100%] h-[45%] text-thirdTheme bg-[#171717] justify-center items-center rounded-b-xl">
-                    <div className="w-[90%] h-[90%] flex flex-col py-5">
-                      <h1 className="text-2xl font-bold">{p.title}</h1>
-                      <p className="mt-9 text-lg">{p.description}</p>
+                    <div className="w-[90%] h-[90%] flex flex-col py-2 md:py-5">
+                      <h1 className="text-xl md:text-2xl font-bold">
+                        {p.title}
+                      </h1>
+                      <p className="mt-3 md:mt-9 md:text-lg">{p.description}</p>
                     </div>
                   </div>
                 </div>

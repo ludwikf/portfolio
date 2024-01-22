@@ -78,10 +78,6 @@ body {
   transform: scaleY(1);
 }
 
-.boxEffect:hover .q {
-  color: black;
-}
-
 div.swiper-button-prev::after {
   margin-bottom: 115px;
   position: absolute;
