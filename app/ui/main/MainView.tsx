@@ -6,9 +6,9 @@ import React from "react";
 
 export default function MainView() {
   return (
-    <div id="about">
+    <div id="about h-[100vh]">
       <div className="bg-[url(https://firebasestorage.googleapis.com/v0/b/portfolio-95980.appspot.com/o/code.jpg?alt=media&token=2ece1804-40f8-40e5-94cd-b016e6a733bb)] bg-no-repeat bg-fixed bg-cover md:bg-center bg-left">
-        <div className="flex h-[100vh] justify-center items-center">
+        <div className="flex justify-center items-center">
           <div className="flex flex-col items-center z-[10]">
             <h2 className="text-thirdTheme font-[100] text-sm md:text-xl">
               LUDWIK FARON
