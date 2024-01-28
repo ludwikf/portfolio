@@ -20,22 +20,26 @@ export default function MainView() {
           <p> DEVELOPER</p>
         </h1>
       </div>
-      <div className="">
+      <div>
         <SwitchLocale />
       </div>
       <div className="flex absolute flex-col justify-between h-[70px] left-[25px] bottom-[25px] z-[10]">
-        <Link
-          href="https://www.linkedin.com/in/ludwik-faron-958623284/"
-          className="cursor-pointer text-thirdTheme"
-        >
-          <FontAwesomeIcon icon={faLinkedin} className="w-[25px] h-[25px]" />
-        </Link>
-        <Link
-          href="https://github.com/lufajs"
-          className="cursor-pointer text-thirdTheme"
-        >
-          <FontAwesomeIcon icon={faGithub} className="w-[25px] h-[25px]" />
-        </Link>
+        <div className="w-[25px] h-[25px]">
+          <Link
+            href="https://www.linkedin.com/in/ludwik-faron-958623284/"
+            className="cursor-pointer text-thirdTheme"
+          >
+            <FontAwesomeIcon icon={faLinkedin} className="w-[25px] h-[25px]" />
+          </Link>
+        </div>
+        <div className="w-[25px] h-[25px]">
+          <Link
+            href="https://github.com/lufajs"
+            className="cursor-pointer text-thirdTheme"
+          >
+            <FontAwesomeIcon icon={faGithub} className="w-[25px] h-[25px]" />
+          </Link>
+        </div>
       </div>
     </div>
   );

@@ -16,7 +16,7 @@ export default function Projects({ dict }: any) {
       </div>
       <div
         id="projects"
-        className="h-[100dvh] bg-[#0d0d0d] flex flex-col justify-center items-center"
+        className="h-[100vh] bg-[#0d0d0d] flex flex-col justify-center items-center"
       >
         <h1 className="py-8 md:py-14 text-lg text-thirdTheme flex justify-center">
           {dict.myProjects}
