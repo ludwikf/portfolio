@@ -12,10 +12,10 @@ export default function Navbar({ locale }: any) {
   };
   return (
     <>
-      <div className="absolute md:fixed z-50 text-thirdTheme top-[25px] left-[25px] text-2xl">
+      <div className="absolute md:fixed z-50 text-thirdTheme top-[25px] left-[25px] text-2xl select-none">
         LF
       </div>
-      <div className="absolute md:fixed flex flex-col z-50 top-[25px] right-[25px] text-thirdTheme cursor-pointer text-right font-bold">
+      <div className="absolute md:fixed flex flex-col z-50 top-[25px] right-[25px] text-thirdTheme cursor-pointer text-right font-bold select-none">
         <div onClick={() => scrolltoHash("about")} className="mb-1 lg:mb-0">
           {locale.mainNavbar.about}
         </div>
