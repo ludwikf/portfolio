@@ -4,7 +4,7 @@ import React from "react";
 export default function Contact({ dict }: any) {
   return (
     <>
-      <div className="h-[75vh] md:h-[100vh] bg-[url(https://firebasestorage.googleapis.com/v0/b/portfolio-95980.appspot.com/o/cube2.jpg?alt=media&token=736e6a31-7596-46af-bfb3-4c790577d275)] bg-no-repeat bg-fixed bg-cover bg-center">
+      <div className="h-[75vh] md:h-[100vh] bg-[url(https://firebasestorage.googleapis.com/v0/b/portfolio-95980.appspot.com/o/17.png?alt=media&token=dc5daa38-2fa3-4a80-ba27-054184bfb61d)] bg-no-repeat bg-fixed bg-cover bg-center">
         <div className="text-thirdTheme text-2xl sm:text-4xl md:text-6xl lg:text-8xl font-bold flex justify-center items-center h-full">
           <p className="w-[100%] md:w-[80%] text-center">
             {dict.idea.content1}

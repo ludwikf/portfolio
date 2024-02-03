@@ -9,7 +9,7 @@ const SS3 = Roboto({ subsets: ["cyrillic-ext"], weight: "400" });
 export const metadata: Metadata = {
   title: "Ludwik Faron | Web Developer",
   description:
-    "Step into Ludwik Faron's digital playground where code brings ideas to life.",
+    "Step into Ludwik Faron's digital world where code brings ideas to life",
 };
 
 export default async function RootLayout({
