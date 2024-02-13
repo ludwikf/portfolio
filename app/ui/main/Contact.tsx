@@ -10,7 +10,6 @@ export default function Contact({ dict }: any) {
             {dict.idea.content1}
             <span className="text-mainTheme"> {dict.idea.span} </span>
             {dict.idea.content2}
-            {/* vmanage */}
           </p>
         </div>
       </div>
