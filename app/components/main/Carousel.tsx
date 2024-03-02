@@ -94,11 +94,11 @@ export default function Carousel() {
                     <Link
                       href={p.link}
                       style={{ backgroundImage: `url(${p.image})` }}
-                      className="hidden lg:block w-[100%] h-[100%] bg-no-repeat bg-fixed bg-cover bg-left rounded-t-xl brightness-[.7] group-hover:blur-sm "
+                      className="hidden lg:block w-[100%] h-[100%] bg-no-repeat bg-fixed bg-cover bg-center rounded-t-xl brightness-[.7] group-hover:blur-sm "
                     ></Link>
                     <div
                       style={{ backgroundImage: `url(${p.image})` }}
-                      className="lg:hidden w-[100%] h-[100%] bg-no-repeat bg-fixed bg-cover bg-left rounded-t-xl brightness-[.7] group-hover:blur-sm "
+                      className="lg:hidden w-[100%] h-[100%] bg-no-repeat bg-fixed bg-cover bg-center rounded-t-xl brightness-[.7] group-hover:blur-sm "
                     ></div>
                     <p className="text-thirdTheme hidden group-hover:block absolute font-bold text-2xl z-10">
                       <Link
@@ -139,7 +139,7 @@ export default function Carousel() {
             <div className="w-[100%] h-[100%] flex flex-col justify-start items-center">
               <div className="w-[80%] h-[80%]">
                 <div className="relative flex justify-center items-center cursor-pointer overflow-hidden w-[100%] h-[50%]">
-                  <div className="w-[100%] h-[100%] bg-[url(https://firebasestorage.googleapis.com/v0/b/portfolio-95980.appspot.com/o/cryptojs.jpg?alt=media&token=13e49318-ebaf-4136-979a-f782a13ca0f7)] bg-no-repeat bg-fixed bg-cover sm:bg-center bg-left rounded-t-xl brightness-[.3]"></div>
+                  <div className="w-[100%] h-[100%] bg-[url(https://firebasestorage.googleapis.com/v0/b/portfolio-95980.appspot.com/o/cryptojs.jpg?alt=media&token=13e49318-ebaf-4136-979a-f782a13ca0f7)] bg-no-repeat bg-fixed bg-cover sm:bg-center bg-center rounded-t-xl brightness-[.3]"></div>
                   <p className="text-thirdTheme absolute font-bold text-2xl z-10">
                     developing...
                   </p>
@@ -148,23 +148,6 @@ export default function Carousel() {
                 <div className="flex w-[100%] h-[45%] text-thirdTheme bg-[#171717] justify-center items-center rounded-b-xl">
                   <p className="w-[90%] text-lg">
                     Innovative app for managing cryptocurrency investments
-                  </p>
-                </div>
-              </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide className="relative w-[50px] text-center flex justify-center items-center">
-            <div className="w-[100%] h-[100%] flex flex-col justify-start items-center">
-              <div className="w-[80%] h-[80%]">
-                <div className="flex justify-center items-center cursor-pointer overflow-hidden w-[100%] h-[50%] rounded-t-xl bg-cover">
-                  <div className="w-[100%] h-[100%] bg-[url(https://firebasestorage.googleapis.com/v0/b/portfolio-95980.appspot.com/o/messjs.jpg?alt=media&token=5cb55869-a7b9-4a32-a0b8-298d301cdf29)] bg-no-repeat bg-fixed bg-cover sm:bg-center bg-left rounded-t-xl brightness-[.3]"></div>
-                  <p className="text-thirdTheme absolute font-bold text-2xl z-10">
-                    developing...
-                  </p>
-                </div>
-                <div className="flex w-[100%] h-[45%] text-thirdTheme bg-[#171717] justify-center items-center rounded-b-xl">
-                  <p className="w-[90%] text-lg">
-                    Connect, chat, share messaging experience
                   </p>
                 </div>
               </div>
