@@ -6,7 +6,7 @@ Welcome to Ludwik Faron's portfolio! This portfolio showcases Ludwik's skills, p
 
 ## Getting Started
 
-To explore our website about yerba mate, simply navigate to https://yerbavibes.com/
+To explore our website about yerba mate, simply navigate to https://ludwikfaron.com/
 
 ## License
 
