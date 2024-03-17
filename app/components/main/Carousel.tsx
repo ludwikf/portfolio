@@ -88,14 +88,16 @@ export default function Carousel() {
               key={p._id}
               className="relative w-[50px] text-center flex justify-center items-center"
             >
-              <div className="w-[100%] h-[100%] flex flex-col justify-start items-center">
+              <Link
+                href={p.link}
+                className="group w-[100%] h-[100%] flex flex-col justify-start items-center"
+              >
                 <div className="w-[80%] h-[80%]">
-                  <div className="group relative flex justify-center items-center overflow-hidden w-[100%] h-[50%]">
-                    <Link
-                      href={p.link}
+                  <div className="relative flex justify-center items-center overflow-hidden w-[100%] h-[50%]">
+                    <div
                       style={{ backgroundImage: `url(${p.image})` }}
                       className="hidden lg:block w-[100%] h-[100%] bg-no-repeat bg-fixed bg-cover bg-center rounded-t-xl brightness-[.7] group-hover:blur-sm "
-                    ></Link>
+                    ></div>
                     <div
                       style={{ backgroundImage: `url(${p.image})` }}
                       className="lg:hidden w-[100%] h-[100%] bg-no-repeat bg-fixed bg-cover bg-center rounded-t-xl brightness-[.7] group-hover:blur-sm "
@@ -131,7 +133,7 @@ export default function Carousel() {
                     </div>
                   </div>
                 </div>
-              </div>
+              </Link>
             </SwiperSlide>
           ))}
         </Swiper>
