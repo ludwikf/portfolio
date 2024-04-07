@@ -10,4 +10,4 @@ To explore our website about yerba mate, simply navigate to https://ludwikfaron.
 
 ## License
 
-Copyright (c) 2024 [Lufajs](https://github.com/lufajs) - Released under the [MIT](https://choosealicense.com/licenses/mit/)
+Copyright (c) 2024 [Ludwikf](https://github.com/ludwikf) - Released under the [MIT](https://choosealicense.com/licenses/mit/)

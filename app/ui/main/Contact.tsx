@@ -18,7 +18,7 @@ export default function Contact({ dict }: any) {
           <div className="mx-8 py-7 md:py-0 lg:mx-40 h-full flex flex-col md:flex-row justify-evenly md:items-center text-thirdTheme">
             <Link
               className="text-2xl md:text-4xl font-bold"
-              href="https://github.com/lufajs"
+              href="https://github.com/ludwikf"
             >
               Github
             </Link>

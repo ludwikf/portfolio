@@ -34,7 +34,7 @@ export default function MainView() {
         </div>
         <div className="w-[25px] h-[25px]">
           <Link
-            href="https://github.com/lufajs"
+            href="https://github.com/ludwikf"
             className="cursor-pointer text-thirdTheme"
           >
             <FontAwesomeIcon icon={faGithub} className="w-[25px] h-[25px]" />
