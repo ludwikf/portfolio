@@ -1,10 +1,6 @@
-import { Roboto } from "next/font/google";
-
 import { getServerSession } from "next-auth/next";
 import SessionProvider from "@/libs/SessionProvider";
 import { Metadata } from "next";
-
-const SS3 = Roboto({ subsets: ["cyrillic-ext"], weight: "400" });
 
 export const metadata: Metadata = {
   title: "Ludwik Faron | Web Developer",
@@ -20,7 +16,7 @@ export default async function RootLayout({
   const session = await getServerSession();
 
   return (
-    <main className={SS3.className}>
+    <main>
       <SessionProvider session={session}>{children}</SessionProvider>
     </main>
   );

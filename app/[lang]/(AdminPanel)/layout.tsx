@@ -1,5 +1,3 @@
-import { Roboto } from "next/font/google";
-
 import { getServerSession } from "next-auth/next";
 import { redirect } from "next/navigation";
 import Navbar from "../../components/admin/Navbar";
@@ -9,8 +7,6 @@ import { Locale } from "@/i18n.config";
 import GetLocale from "@/app/components/GetLocale";
 import { Metadata } from "next";
 import UserProfile from "@/app/components/admin/UserProfile";
-
-const SS3 = Roboto({ subsets: ["latin"], weight: "400" });
 
 export const metadata: Metadata = {
   title: "portfolio | admin panel",
@@ -35,7 +31,7 @@ export default async function RootLayout({
   }
 
   return (
-    <main className={SS3.className}>
+    <main>
       <Navbar
         locale={dictionary}
         params={{
