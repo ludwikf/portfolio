@@ -25,7 +25,6 @@ export default async function RootLayout({
     <html lang={params.lang}>
       <head>
         <PlausibleProvider domain="ludwikfaron.com" />
-        {/* 50 */}
       </head>
       <body className={SS3.className}>
         <SessionProvider session={session}>{children}</SessionProvider>
