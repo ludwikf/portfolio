@@ -14,6 +14,7 @@ const config: Config = {
         short: { raw: "((min-width: 640px) and (max-height: 450px))" },
         shortnav: { raw: "(max-height: 450px)" },
         sm: "300px",
+        small: "500px",
       },
       colors: {
         thirdTheme: "#b7ab98",

@@ -81,18 +81,15 @@ export default function Carousel() {
           }}
           navigation={true}
           modules={[Pagination, Navigation]}
-          className="w-[100%] h-[100%] mt-7"
+          className="w-[100%] sm:w-[95%] h-[100%] mt-5"
         >
           {projects.map((p) => (
             <SwiperSlide
               key={p._id}
-              className="relative w-[50px] text-center flex justify-center items-center"
+              className="relative w-[100%] h-[100%] text-center flex px-5 small:px-12 justify-center items-center"
             >
-              <Link
-                href={p.link}
-                className="group w-[100%] h-[100%] flex flex-col justify-start items-center"
-              >
-                <div className="w-[80%] h-[80%]">
+              <div className="group w-[100%] h-[80%] flex flex-col justify-start items-center">
+                <div className="w-[100%] h-[100%]">
                   <div className="relative flex justify-center items-center overflow-hidden w-[100%] h-[50%]">
                     <div
                       style={{ backgroundImage: `url(${p.image})` }}
@@ -129,11 +126,11 @@ export default function Carousel() {
                       <h1 className="text-xl md:text-2xl font-bold">
                         {p.title}
                       </h1>
-                      <p className="mt-3 md:mt-9 md:text-lg">{p.description}</p>
+                      <p className="mt-3 md:mt-9 md:text-md">{p.description}</p>
                     </div>
                   </div>
                 </div>
-              </Link>
+              </div>
             </SwiperSlide>
           ))}
         </Swiper>

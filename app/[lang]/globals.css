@@ -122,6 +122,14 @@ span.swiper-pagination-bullet {
   font-size: 1.4em;
 }
 
+div.swiper-button-prev {
+  left: 0px;
+}
+
+div.swiper-button-next {
+  right: 0px;
+}
+
 @media screen and (max-width: 500px) {
   div.swiper-button-prev {
     display: none;
