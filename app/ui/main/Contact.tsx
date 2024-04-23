@@ -6,7 +6,7 @@ export default function Contact({ dict }: any) {
     <>
       <div className="h-[75vh] md:h-[100vh] bg-[url(https://firebasestorage.googleapis.com/v0/b/portfolio-95980.appspot.com/o/17.png?alt=media&token=dc5daa38-2fa3-4a80-ba27-054184bfb61d)] bg-no-repeat bg-fixed bg-cover bg-center">
         <div className="text-thirdTheme text-2xl sm:text-4xl md:text-6xl lg:text-8xl font-bold flex justify-center items-center h-full">
-          <p className="w-[100%] md:w-[80%] text-center">
+          <p className="w-[90%] md:w-[70%] text-center">
             {dict.idea.content1}
             <span className="text-mainTheme"> {dict.idea.span} </span>
             {dict.idea.content2}

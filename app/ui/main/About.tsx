@@ -24,7 +24,7 @@ export default function About({ dict }: any) {
             <div className="group boxEffect select-none border-t-[1px] border-[#b7ab9844]">
               <div className="relative group-hover:text-black">
                 <div className="e flex justify-end items-center h-[80px] xl:h-[100px] text-black bg-mainTheme ">
-                  <span className="leading-5 sm:leading-6 xl:leading-7 text-sm md:text-md w-[90%] xl:w-[30%] mr-3 md:mr-10">
+                  <span className="leading-5 sm:leading-6 xl:leading-7 text-sm md:text-lg font-[500] w-[90%] xl:w-[30%] mr-3 md:mr-10">
                     {dict.whatIDo.content.responsive.content}
                   </span>
                 </div>
@@ -36,7 +36,7 @@ export default function About({ dict }: any) {
             <div className="group boxEffect select-none border-t-[1px] border-[#b7ab9844]">
               <div className="relative group-hover:text-black">
                 <div className="e flex justify-end items-center h-[80px] xl:h-[100px] text-black bg-mainTheme ">
-                  <span className="leading-5 sm:leading-6 xl:leading-7 text-sm md:text-md w-[90%] xl:w-[30%] mr-3 md:mr-10">
+                  <span className="leading-5 sm:leading-6 xl:leading-7 text-sm md:text-lg font-[500] w-[90%] xl:w-[30%] mr-3 md:mr-10">
                     {dict.whatIDo.content.html}
                   </span>
                 </div>
@@ -48,7 +48,7 @@ export default function About({ dict }: any) {
             <div className="group boxEffect select-none border-t-[1px] border-[#b7ab9844]">
               <div className="relative group-hover:text-black">
                 <div className="e flex justify-end items-center h-[80px] xl:h-[100px] text-black bg-mainTheme ">
-                  <span className="leading-5 sm:leading-6 xl:leading-7 text-sm md:text-md w-[90%] xl:w-[30%] mr-3 md:mr-10">
+                  <span className="leading-5 sm:leading-6 xl:leading-7 text-sm md:text-lg font-[500] w-[90%] xl:w-[30%] mr-3 md:mr-10">
                     {dict.whatIDo.content.js}
                   </span>
                 </div>
@@ -60,7 +60,7 @@ export default function About({ dict }: any) {
             <div className="group boxEffect select-none border-t-[1px] border-[#b7ab9844]">
               <div className="relative group-hover:text-black">
                 <div className="e flex justify-end items-center h-[80px] xl:h-[100px] text-black bg-mainTheme ">
-                  <span className="leading-5 sm:leading-6 xl:leading-7 text-sm md:text-md w-[90%] xl:w-[30%] mr-3 md:mr-10">
+                  <span className="leading-5 sm:leading-6 xl:leading-7 text-sm md:text-lg font-[500] w-[90%] xl:w-[30%] mr-3 md:mr-10">
                     {dict.whatIDo.content.dev.content}
                   </span>
                 </div>
@@ -72,7 +72,7 @@ export default function About({ dict }: any) {
             <div className="group boxEffect select-none border-t-[1px] border-[#b7ab9844]">
               <div className="relative group-hover:text-black">
                 <div className="e flex justify-end items-center h-[80px] xl:h-[100px] text-black bg-mainTheme ">
-                  <span className="leading-5 sm:leading-6 xl:leading-7 text-sm md:text-md w-[90%] xl:w-[30%] mr-3 md:mr-10">
+                  <span className="leading-5 sm:leading-6 xl:leading-7 text-sm md:text-lg font-[500] w-[90%] xl:w-[30%] mr-3 md:mr-10">
                     {dict.whatIDo.content.test.content}
                   </span>
                 </div>
